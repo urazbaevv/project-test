@@ -1,11 +1,11 @@
 <?php
 $title = 'Post jaratiw';
-require 'assets/header.php'; 
+require 'assets/header.php';
 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-//
+    //
 }
 
 
@@ -43,8 +43,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <label class="form-label">Magliwmat berin</label>
                 <textarea name="body" class="form-control" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Jiberiw</button>
-            
+
+            <div class="flow-root">
+                <button type="submit" class="btn btn-primary">Jiberiw</button>
+                <button type="submit" class="btn btn-primary flex justify-end">Arqaga qaytiw</button>
+            </div>
         </form>
     </div>
 
