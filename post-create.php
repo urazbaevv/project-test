@@ -44,14 +44,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <textarea name="body" class="form-control" rows="3"></textarea>
             </div>
 
-            <div class="flow-root">
                 <button type="submit" class="btn btn-primary">Jiberiw</button>
-                <button type="submit" class="btn btn-primary flex justify-end">Arqaga qaytiw</button>
-            </div>
+                <button type="submit" class="btn btn-primary justify-right ml-80">Arqaga qaytiw</button>
         </form>
     </div>
 
 </div>
+
+
+
+
 <!-- <div class="row align-items-md-stretch">
     <div class="col-md-6">
         <div class="h-100 p-5 text-bg-dark rounded-3">
