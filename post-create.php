@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $statement->execute([
         'title' => $title,
         'body' => $body
-     ]);
+    ]);
      
      echo 'Zor , ajayip saqlandi';
 }
