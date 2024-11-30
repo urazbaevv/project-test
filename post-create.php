@@ -2,10 +2,20 @@
 $title = 'Post jaratiw';
 require 'assets/header.php';
 
+require 'database.php';
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $title = $_POST['title'];
+    $body = $_POST['body'];
 
-    //
+    $statement = $pdo->prepare("INSERT INTO qwerty (title, body) VALUES (:tittle , :body)");
+    $statement->execute([
+        'title' => $title,
+        'body' => $body
+     ]);
+     
+     echo 'Zor , ajayip saqlandi';
 }
 
 
