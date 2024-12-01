@@ -9,19 +9,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
     $body = $_POST['body'];
 
-    $statement = $pdo->prepare("INSERT INTO qwerty (title, body) VALUES (:tittle , :body)");
+    $statement = $pdo->prepare("INSERT INTO qwerty (title, body) VALUES (:title , :body)");
     $statement->execute([
         'title' => $title,
         'body' => $body
     ]);
-     
-     echo 'Zor , ajayip saqlandi';
+
+    $_SESSION['post-jaratildi'] = 'Post jaratildi';
+
+    header("Location: blog.php");
+
+    
+
 }
 
 
 ?>
 
 <!-- <div class="container mt-5">
+    //  echo 'Zor , ajayip saqlandi';
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -54,8 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <textarea name="body" class="form-control" rows="3"></textarea>
             </div>
 
-                <button type="submit" class="btn btn-primary">Jiberiw</button>
-                <button type="submit" class="btn btn-primary justify-right ml-80">Arqaga qaytiw</button>
+                <a href="post.php"><button type="submit" class="btn btn-primary">Jiberiw</button></a>
+                <a href="#"><button type="submit" class="btn btn-primary justify-right ml-80">Arqaga qaytiw</button></a>
         </form>
     </div>
 
